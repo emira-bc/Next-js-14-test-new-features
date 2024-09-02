@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5f7fa;
+  }
+  
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex: 1;
+  }
+  
+  .panelWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .panel {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }

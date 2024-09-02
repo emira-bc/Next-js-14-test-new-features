@@ -1,0 +1,87 @@
+/* app/globals.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #1e2a38;
+  color: white;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header .search-bar {
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+header .search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f0a500;
+  color: #1e2a38;
+}
+
+nav ul li a::after {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f0a500;
+  transition: width .3s;
+  margin-top: 5px;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.loading-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
