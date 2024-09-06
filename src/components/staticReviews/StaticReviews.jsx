@@ -1,8 +1,8 @@
 import React from 'react';
 import { fetchReviews } from "@/services/review";
-// export const revalidate = 10;
-// export const dynamic = 'force-static';
-export default async function Reviews() {
+export const revalidate = 10;
+export const dynamic = 'force-static';
+export default async function StaticReviews() {
 
   const reviews = await fetchReviews();
 

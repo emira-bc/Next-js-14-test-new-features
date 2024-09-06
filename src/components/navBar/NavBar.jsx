@@ -10,7 +10,8 @@ export function NavBar({ path, items }) {
     <nav className={styles.navbar}>
       <ul className={styles.navList}>
         {items.map((item, index) => {
-          const navPath = `${path}${item.slug ? `/${item.slug}` : ''}`
+          const navPath = `${path}${item.slug ? `/${item.slug}` : ''}`;
+          console.log('navPath', navPath)
           const isActive =
           (!item.slug && pathname === null) ||
           pathname === navPath

@@ -6,7 +6,6 @@ import styles from '@/styles/components/layout.module.css';
         <div className={styles.panel}>
           {children}
         </div>
-
         <div className={styles.panelWrapper}>
           <div className={styles.panel}>
             {analytics}

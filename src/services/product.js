@@ -1,10 +1,10 @@
-import { localBaseUrl } from "@/constants/baseUrls"
+import { localBaseUrl } from "@/constants/baseUrls";
 import { fakestoreapi } from "@/constants/baseUrls";
 import { simulateDelay } from "@/utils/delay";
 
 export const fetchProductById = async (id, delay = 0) => {
     console.log('=======>Product fetched<======', new Date());
-    const response = await fetch(`${localBaseUrl}/products/${id}`);
+    const response = await fetch(`${localBaseUrl}/products/${id}`/*, { next: { revalidate: 30 }} */);
     const data = await response.json();
     await simulateDelay(delay);
     return data

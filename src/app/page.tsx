@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from "@/styles/pages/page.module.css";
-
+export const dynamic = 'force-static';
+export const revalidate = 50;
 export default function Home() {
   console.log('//////////////////////Page home is rendred\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\')
   return (
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
         <div className={styles.card}>
           <Link
-            href="/productWithPartialRender/1"
+            href="/productWithPartialRender/2"
           >
             <h2>
               Product with partial render <span>-&gt;</span>
@@ -62,7 +63,7 @@ export default function Home() {
         </div>
         <div className={styles.card}>
           <Link
-            href="/productWithStreaming/1"
+            href="/productWithStreaming/3"
           >
             <h2>
               Product with streaming <span>-&gt;</span>
@@ -70,7 +71,7 @@ export default function Home() {
           </Link>
         </div>
         <div className={styles.card}>
-          <Link
+          <Link 
             href="/parallelRoutes"
           >
             <h2>

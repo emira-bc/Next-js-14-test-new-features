@@ -1,11 +1,12 @@
-import Reviews from "@/components/reviews/Reviews";
+import StaticReviews from "@/components/staticReviews/StaticReviews";
 import { fetchProductById } from "@/services/product";
+// import { fetchReviews } from "@/services/review";
 import styles from '@/styles/pages/product.module.css';
 
 export default async function Product({ params: { slug } }) {
 
   const productData = await fetchProductById(slug);
-
+  // const reviews = await fetchReviews();
   if (!productData) {
     return <div>Loading...</div>;
   }
@@ -26,7 +27,7 @@ export default async function Product({ params: { slug } }) {
           <p><span>Description:</span> {productData.description}</p>
         </div>
       </div>
-      <Reviews />
+      <StaticReviews />
     </>
   );
 }

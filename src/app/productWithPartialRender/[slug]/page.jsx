@@ -4,7 +4,7 @@ import Reviews from "@/components/reviews/Reviews";
 import LoadingSkeleton from '@/components/loadingskeleton/LoadingSkeleton';
 import { fetchProductList } from "@/services/product";
 export const experimental_ppr = true;
-export const revalidate = 60000;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   let posts = await fetchProductList();

@@ -1,11 +1,13 @@
 import styles from '@/styles/pages/product.module.css';
 import { cookies } from 'next/headers';
 import { fetchProductById } from "@/services/product";
+// import { fetchReviews } from "@/services/review";
 // import Reviews from "@/components/reviews/Reviews";
 
 const Product = async ({ slug }) => {
     console.log('slug from component Product', slug);
-    const productData = await fetchProductById(slug);
+    const productData = await fetchProductById(slug, 6000);
+    // const reviews = await fetchReviews();
     if (!productData) {
         return <div>Loading...</div>;
     }
